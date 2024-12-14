@@ -1,0 +1,61 @@
+ /* Custom CSS */
+ #sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+}
+
+#sidebar.active {
+    right: 0;
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;
+}
+
+/* Button hover animation */
+.btn-custom {
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    box-shadow: 0 0 15px rgba(0,123,255,0.5);
+    transform: translateY(-2px);
+}
+
+/* Spinning icon animation */
+.spinner {
+    display: none;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Button active state */
+.btn-custom.loading .btn-text {
+    display: none;
+}
+
+.btn-custom.loading .spinner {
+    display: inline-block;
+}
+
+/* Sidebar nav links */
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

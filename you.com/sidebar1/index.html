@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman dengan Sidebar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="toggleSidebar" class="btn btn-primary position-fixed" style="top: 20px; left: 20px;">Toggle Sidebar</button>
+
+    <div id="sidebar" class="sidebar position-fixed end-0 top-0 vh-100 bg-light shadow" style="width: 250px; transform: translateX(100%); transition: transform 0.3s;">
+        <div class="p-3">
+            <h5>Menu</h5>
+            <button class="btn btn-secondary my-2 animate-button" onclick="reloadPage()">Refresh</button>
+            <button class="btn btn-secondary my-2 animate-button" onclick="navigateTo('page1.html')">Halaman 1</button>
+            <button class="btn btn-secondary my-2 animate-button" onclick="navigateTo('page2.html')">Halaman 2</button>
+            <button class="btn btn-secondary my-2 animate-button" onclick="navigateTo('page3.html')">Halaman 3</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

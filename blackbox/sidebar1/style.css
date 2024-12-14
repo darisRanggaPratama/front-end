@@ -1,0 +1,19 @@
+body {
+    overflow-x: hidden; /* Mencegah scroll horizontal */
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Mulai di luar layar */
+    width: 250px;
+    height: 100%;
+    background-color: #f8f9fa;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s ease; /* Animasi halus */
+    padding: 20px;
+}
+
+.sidebar.show {
+    right: 0; /* Tampilkan sidebar */
+}

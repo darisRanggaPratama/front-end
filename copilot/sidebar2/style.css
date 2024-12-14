@@ -1,0 +1,26 @@
+.sidebar {
+    position: fixed;
+    right: -300px;
+    top: 0;
+    height: 100%;
+    width: 300px;
+    background-color: #f8f9fa;
+    transition: right 0.3s;
+    padding: 20px;
+}
+
+.sidebar.show {
+    right: 0;
+}
+
+.btn:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+}
+
+.btn .spinner-border {
+    display: none;
+}
+
+.btn.loading .spinner-border {
+    display: inline-block;
+}
