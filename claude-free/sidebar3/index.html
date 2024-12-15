@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sidebar Web Application</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Tombol Toggle Sidebar -->
+    <button id="toggleSidebar" class="btn btn-primary position-fixed top-0 end-0 m-3 toggle-btn">
+        Toggle Sidebar
+        <i class="reload-icon"></i>
+    </button>
+
+    <!-- Sidebar Kiri -->
+    <div id="leftSidebar" class="sidebar sidebar-left">
+        <button class="btn btn-secondary sidebar-btn">Page 1 
+            <i class="reload-icon"></i>
+        </button>
+        <button class="btn btn-secondary sidebar-btn">Page 2 
+            <i class="reload-icon"></i>
+        </button>
+        <button class="btn btn-secondary sidebar-btn">Page 3 
+            <i class="reload-icon"></i>
+        </button>
+    </div>
+
+    <!-- Sidebar Kanan -->
+    <div id="rightSidebar" class="sidebar sidebar-right">
+        <button id="refreshPage" class="btn btn-info sidebar-btn">
+            Refresh Halaman
+            <i class="reload-icon"></i>
+        </button>
+        <button class="btn btn-secondary sidebar-btn">Lainnya 
+            <i class="reload-icon"></i>
+        </button>
+    </div>
+
+    <!-- Bootstrap 5 JS dan Script Kustom -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

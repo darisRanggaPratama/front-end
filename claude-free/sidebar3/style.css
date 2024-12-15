@@ -1,0 +1,68 @@
+body {
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 200px;
+    background-color: #f8f9fa;
+    transition: transform 0.3s ease;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-left {
+    left: -200px;
+}
+
+.sidebar-right {
+    right: -200px;
+}
+
+.sidebar.show {
+    transform: translateX(0);
+}
+
+.sidebar-left.show {
+    transform: translateX(200px);
+}
+
+.sidebar-right.show {
+    transform: translateX(-200px);
+}
+
+.sidebar-btn {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.sidebar-btn:hover {
+    animation: blink 0.7s infinite;
+}
+
+.toggle-btn {
+    z-index: 1000;
+}
+
+.toggle-btn:hover {
+    animation: blink 0.7s infinite;
+}
+
+.reload-icon {
+    display: none;
+}
+
+.reload-icon.show {
+    display: inline-block;
+    margin-left: 5px;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}

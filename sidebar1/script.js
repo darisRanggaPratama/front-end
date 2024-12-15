@@ -17,21 +17,21 @@ function initPageChangeDetector() {
         if (!changeDetected) {
             mutations.forEach((mutation) => {
                 // Kondisi untuk mendeteksi berbagai jenis perubahan
-                const isSignificantChange = 
+                const isSignificantChange =
                     mutation.type === 'childList' ||      // Penambahan/penghapusan elemen
                     mutation.type === 'attributes' ||     // Perubahan atribut
                     mutation.type === 'characterData';    // Perubahan teks
 
                 if (isSignificantChange) {
                     changeDetected = true;
-                    
+
                     // Opsional: Log perubahan untuk debugging
                     console.log('Perubahan terdeteksi:', mutation);
 
                     // Reload halaman setelah 1 detik untuk menghindari reload berulang
                     setTimeout(() => {
                         location.reload();
-                    }, 1000);
+                    }, 10000); // 1000 ms = 1 detik
                 }
             });
         }
@@ -59,4 +59,19 @@ function setupPageChangeDetection() {
 }
 
 // Jalankan detector
-setupPageChangeDetection();
+// setupPageChangeDetection();
+
+let menuToggle = document.querySelector('.menuToggle');
+let sidebar = document.querySelector('.sidebar');
+menuToggle.onclick = function () {
+    menuToggle.classList.toggle('active');
+    sidebar.classList.toggle('active');
+}
+
+let Menulist = document.querySelectorAll('.Menulist li');
+function activeLink() {
+    Menulist.forEach((item) => item.classList.remove('active'));
+    this.classList.add('active');
+}
+
+Menulist.forEach((item) => item.addEventListener('click', activeLink));
